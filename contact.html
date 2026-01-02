@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Contact - Priscilla</title>
+  <style>
+    :root {
+      --bg-dark: #1f1b17;
+      --bg-card: #2a241f;
+      --text-main: #f5f2ee;
+      --text-muted: #c9c3bb;
+      --accent: #c49a6c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { background-color: #1f1b17; }
+    body { color: var(--text-main); font-family: Arial, sans-serif; }
+    header { max-width: 1100px; margin: 0 auto; padding: 24px 20px; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: var(--text-muted); text-decoration: none; margin-left: 20px; }
+    nav a:hover { color: var(--accent); }
+    main { max-width: 600px; margin: 60px auto; padding: 0 20px; }
+    h1 { font-size: 36px; margin-bottom: 30px; }
+    form { display: flex; flex-direction: column; gap: 20px; }
+    label { color: var(--text-muted); font-size: 14px; }
+    input, textarea { background-color: var(--bg-card); color: var(--text-main); padding: 12px; border: 1px solid #3a3430; border-radius: 6px; font-family: Arial, sans-serif; }
+    input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+    button { background-color: var(--accent); color: #1f1b17; padding: 12px 24px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
+    button:hover { background-color: #d4af37; }
+    footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Portfolio</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Get in Touch</h1>
+    <form>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+  <footer>
+    © Priscilla Lartey • All rights reserved.
+  </footer>
+</body>
+</html>
