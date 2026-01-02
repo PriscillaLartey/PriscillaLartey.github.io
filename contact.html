@@ -13,21 +13,130 @@
       --text-muted: #c9c3bb;
       --accent: #c49a6c;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { background-color: #1f1b17; }
-    body { color: var(--text-main); font-family: Arial, sans-serif; }
-    header { max-width: 1100px; margin: 0 auto; padding: 24px 20px; display: flex; justify-content: space-between; align-items: center; }
-    nav a { color: var(--text-muted); text-decoration: none; margin-left: 20px; }
-    nav a:hover { color: var(--accent); }
-    main { max-width: 600px; margin: 60px auto; padding: 0 20px; }
-    h1 { font-size: 36px; margin-bottom: 30px; }
-    form { display: flex; flex-direction: column; gap: 20px; }
-    label { color: var(--text-muted); font-size: 14px; }
-    input, textarea { background-color: var(--bg-card); color: var(--text-main); padding: 12px; border: 1px solid #3a3430; border-radius: 6px; font-family: Arial, sans-serif; }
-    input:focus, textarea:focus { outline: none; border-color: var(--accent); }
-    button { background-color: var(--accent); color: #1f1b17; padding: 12px 24px; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
-    button:hover { background-color: #d4af37; }
-    footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 13px; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      background-color: var(--bg-dark);
+    }
+    body {
+      color: var(--text-main);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: var(--text-main);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    label {
+      color: var(--text-muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    input,
+    textarea {
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      padding: 12px 14px;
+      border: 1px solid #3a3430;
+      border-radius: 6px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background-color: rgba(196, 154, 108, 0.05);
+    }
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    button {
+      background-color: var(--accent);
+      color: #1f1b17;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #d4af37;
+      transform: translateY(-2px);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 80px;
+      border-top: 1px solid #3a3430;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #d4af37;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav a {
+        margin-left: 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      main {
+        margin: 40px auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -41,24 +150,25 @@
   </header>
   <main>
     <h1>Get in Touch</h1>
-    <form>
-      <div>
-        <label for="name">Name</label>
+    <form action="https://formspree.io/f/xjgkrkzq" method="POST">
+      <div class="form-group">
+        <label for="name">Your Name</label>
         <input type="text" id="name" name="name" required>
       </div>
-      <div>
-        <label for="email">Email</label>
+      <div class="form-group">
+        <label for="email">Your Email</label>
         <input type="email" id="email" name="email" required>
       </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+      <div class="form-group">
+        <label for="message">A message for me?</label>
+        <textarea id="message" name="message" required></textarea>
       </div>
       <button type="submit">Send Message</button>
     </form>
   </main>
   <footer>
-    © Priscilla Lartey • All rights reserved.
+    <p><a href="https://github.com/YOUR_USERNAME">GitHub</a> • <a href="https://linkedin.com/in/YOUR_USERNAME">LinkedIn</a></p>
+    <p style="margin-top: 8px;">© Priscilla Lartey • All rights reserved.</p>
   </footer>
 </body>
 </html>
