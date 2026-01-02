@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Priscilla</title>
-
+  <meta name="color-scheme" content="dark" />
+  <title>About - Priscilla</title>
   <style>
     :root {
       --bg-dark: #1f1b17;
@@ -13,20 +13,19 @@
       --text-muted: #c9c3bb;
       --accent: #c49a6c;
     }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
     }
-
-    body {
+    html, body {
       background-color: var(--bg-dark);
+    }
+    body {
       color: var(--text-main);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
-
     header {
       max-width: 1100px;
       margin: 0 auto;
@@ -35,45 +34,77 @@
       justify-content: space-between;
       align-items: center;
     }
-
     nav a {
       color: var(--text-muted);
       text-decoration: none;
       margin-left: 20px;
       font-size: 14px;
+      transition: color 0.3s ease;
     }
-
     nav a:hover {
       color: var(--accent);
     }
-
     main {
-      max-width: 900px;
+      max-width: 700px;
       margin: 60px auto;
       padding: 0 20px;
     }
-
     h1 {
       font-size: 36px;
-      margin-bottom: 24px;
+      margin-bottom: 40px;
+      color: var(--text-main);
     }
-
-    p {
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .about-content p {
       color: var(--text-muted);
-      margin-bottom: 18px;
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 1.8;
     }
-
+    .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
     footer {
       text-align: center;
       padding: 40px 20px;
       color: var(--text-muted);
       font-size: 13px;
+      margin-top: 80px;
+      border-top: 1px solid #3a3430;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #d4af37;
+    }
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      nav a {
+        margin-left: 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      main {
+        margin: 40px auto;
+      }
+      .about-content p {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <div><strong>Portfolio</strong></div>
     <nav>
@@ -82,26 +113,22 @@
       <a href="about.html">About</a>
     </nav>
   </header>
-
   <main>
     <h1>About me</h1>
+    <div class="about-content">
+      <p>I'm a data analyst who believes the best work happens when you ask the right questions first.</p>
 
-    <p>
-      Write a short introduction about yourself here. Focus on how you think, not just the tools you use.
-    </p>
+      <p>I'm drawn to problems with purpose. Work that creates meaningful impact in sustainability, technology, and social good.</p>
 
-    <p>
-      You can mention the kinds of problems you enjoy working on, the industries you care about, and what good analysis means to you.
-    </p>
+      <p>Good analysis means clarity over complexity. Translating data into insights people can actually act on.</p>
 
-    <p>
-      This page should read like a calm conversation, not a CV.
-    </p>
+      <p>I think in patterns and possibilities, and I'm motivated by knowing my work helps people make better decisions.</p>
+    </div>
   </main>
 
   <footer>
-    © Priscilla • LinkedIn • GitHub
+    <p><a href="https://github.com/YOUR_USERNAME">GitHub</a> • <a href="https://linkedin.com/in/YOUR_USERNAME">LinkedIn</a></p>
+    <p style="margin-top: 8px;">© Priscilla Lartey • All rights reserved.</p>
   </footer>
-
 </body>
 </html>
